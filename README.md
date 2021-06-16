@@ -11,7 +11,7 @@ The following provides some more information about the needs and constraints.
 3)	Current configuration offers a web API (server-sent events) which can be used to stream operational sensor data to the cloud.
 4)	Data rates of each sensor is up to 1 record per minute, for a duration of the equipment’s life (usually 20 years)
 5)	For this project, the focus is on detecting anomalies on the evaporator, which is one of the equipment used in a typical HVAC system. This anomaly takes the form of unusual spikes in the evaporator temperature. These spikes are readily distinguished from “regular” observations in a time series plot. Proactive action (e.g. changing pressure setting, temporarily increasing set point temperature etc.) if taken within the timespan of 20 minutes since the time of the anomalous event is considered a desired outcome. It can take up to 10 minutes for maintenance staff to take an action after detecting an anomoulous event. Hence, anomalous events needs to be alerted to the maintenance staff within 5-10 minutes by the analytics solution. It is calculated that by doing so, costly repairs of the asset can be prevented. The expected cost of the repairs is $100,000
-6)	Prior lab tests has revealed that abnormal conditions lasting for 5 minutes or longer should prompt an alert.
+6)	Prior lab tests has revealed that consecutive abnormal readings lasting for 5 minutes or longer should prompt an alert.
 
 ## How this Opportunity was Met?
 The following provides an AWS architecture to achieve the business needs.
