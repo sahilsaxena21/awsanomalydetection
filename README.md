@@ -71,5 +71,6 @@ To monitor the performance of the model in real-time, we connect the DynamoDB ta
 
 ## Next Steps
 ![Lambda Pattern]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/lambda_pattern.JPG)
+
 In the future, the business may want to be able to provide querying functionality. In this case, AWS Redshift can be considered. Moreover, a lambda architecture can be considered for this use-case, since the architecture is designed to answer queries of data that is continuously updated. An example of the architecture is as below.
 
