@@ -5,7 +5,8 @@ A hypothetical business develops and produces edge devices that measure and cont
 With thousands of sensors in current operation across the business’ customer base, the company’s challenge is to achieve the needed scale to collect, store and analyze massive amounts of customers’ sensor data (both current and new customers) and keep it available on a 24×7 basis.
 
 ## Background Information
-The following provides some more information about the needs and constraints. 
+The following provides some background information about the needs and constraints of the business.
+
 1)	The analytics solution needs to be able to collect, store, process, and analyze sensor data from edge devices. It should be able to detect anomalous readings and alert maintenance personnel via. text notification in real time.
 2)	Current capabilities does not support performing storage and processing on the edge.
 3)	Current configuration offers a web API (server-sent events) which can be used to stream operational sensor data to the cloud.
