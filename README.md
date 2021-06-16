@@ -1,4 +1,4 @@
-# End-to-End Serverless Real-Time Anomaly Detection Analytics on AWS
+# End-to-End Serverless Real-Time Anomaly Detection App on AWS
 
 Demonstrates an app tested in a lab environment to facilitate predictive maintenance by detecting and delivering real-time text alerts during anomalous operating conditions.
 
