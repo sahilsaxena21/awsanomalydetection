@@ -52,8 +52,10 @@ DynamoDB is used for several reasons:
 
 **4. Amazon Random Cut Forests (RCF) for Anomaly Detection**
 
-Note: With each data point, RCF associates an anomaly score. Low score values indicate that the data point is considered "normal." High values indicate the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous.
 ![Detected Anomalous Readings by RCF]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/anomaly_detection.JPG)
+
+Note: With each data point, RCF associates an anomaly score. Low score values indicate that the data point is considered "normal." High values indicate the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous.
+
 
 -	Designed to detect unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. This aligns with the needs of the business.
 -	Designed to work with arbitrary-dimensional input, allowing opportunities to scale the model to other anomalous readings in future projects.
