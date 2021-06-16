@@ -63,10 +63,11 @@ DynamoDB is used for several reasons:
 
 Note: In this example, an anomalous event was invoked in a test environment at around 12:00 pm to test the effectiveness of the RCF model. The way RCF model works, it associates an anomaly score value for each record. Low score values indicate that the data point is considered "normal." High values suggests the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous. 
 
+RCF is used for the following reasons:
 
 -	Designed to detect unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. This aligns with the needs of the business.
 -	Designed to work with arbitrary-dimensional input, allowing opportunities to scale the model to other anomalous readings in future projects.
--	In this use case, **a more conservative approach is taken by using 2.5 standard deviations** from the mean score (instead of the common practice of 3 standard deviations) as the cut off for anomalous readings. This is due to the preference of prioritizing recall over precision. In this case, the cost of a false negative far outweighs the cost of a false positive. Further lab tests are planned in the future to further optimize this cut off value. 
+-	In this use case, **a more conservative approach is taken by using 2.5 standard deviations** from the mean score as the cut off for anomalous readings. This stems from the business need to prioritizing recall over precision. The cost of a false negative far outweighs the cost of a false positive. Further lab tests are planned in the future to further optimize this cut off value. 
 
 
 ## Model Monitoring
