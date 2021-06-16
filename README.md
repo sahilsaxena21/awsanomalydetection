@@ -57,7 +57,7 @@ DynamoDB is used for several reasons:
 
 **RCF Model against Laboratory Test Data with Invoked Anomalous Event**
 
-Note: With each data point, RCF associates an anomaly score. Low score values indicate that the data point is considered "normal." High values indicate the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous. In this example, an anomalous event was invoked at around 12:00 pm to test the effectiveness of the RCF model.
+Note: In this example, an anomalous event was invoked in a test environment at around 12:00 pm to test the effectiveness of the RCF model. The way RCF model works, it associates an anomaly score value for each record. Low score values indicate that the data point is considered "normal." High values suggests the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous. 
 
 
 -	Designed to detect unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. This aligns with the needs of the business.
