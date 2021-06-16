@@ -22,9 +22,11 @@ The following provides an AWS architecture to achieve the business needs.
 ### Several design choices are discussed below.
 
 **Serverless Computing on the Cloud**
+
 While opting for EC2 instances for processing is a possible solution, a serverless approach is opted to make management and provisioning of environment easier, while being more performant. Given the current limitations for edge computing, the data is streamed to the AWS cloud using web APIs.
 
 **Lambda Functions**
+
 Three Lambda functions are used. 
 1.	[api_ping.py](https://github.com/sahilsaxena21/awsanomalydetection/blob/main/lambda_functions/api_ping.py) To stream real-time data from the web API to DynamoDB. 
 2.	[Dynamodb2s3.py](https://github.com/sahilsaxena21/awsanomalydetection/blob/main/lambda_functions/dynamodb2s3.py) Making batch calls from DynamoDB to S3
@@ -38,6 +40,7 @@ Lambda functions are used for several reasons:
 -	High availability, high scalability and high performance
 
 **DynamoDB**
+
 DynamoDB is used for real-time hot storage and for storing anomaly cut off values updated by the Sagemaker RCF algorithm
 ![Database Model]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/ERD.JPG)
 DynamoDB is used for several reasons
@@ -47,6 +50,7 @@ DynamoDB is used for several reasons
 •	Highly available at all times without manual intervention, high level of data durability
 
 **Amazon Random Cut Forests (RCF) for Anomaly Detection**
+
 Note: With each data point, RCF associates an anomaly score. Low score values indicate that the data point is considered "normal." High values indicate the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous.
 [Detected Anomalous Readings by RCF]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/anomaly_detection.JPG)
 •	Designed to detect unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. This aligns with the needs of the business.
