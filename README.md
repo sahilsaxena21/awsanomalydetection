@@ -14,7 +14,7 @@ The following provides some more information about the needs and constraints.
 6)	Prior lab tests has revealed that consecutive abnormal readings lasting for 5 minutes or longer should prompt an alert.
 
 ## How this Opportunity was Met?
-The following provides an AWS architecture to achieve the business needs.
+The following provides an AWS architecture solution to achieve the business needs.
 
 ![Architecture](https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/deployed_architecture.JPG)
 
