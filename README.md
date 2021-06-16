@@ -43,9 +43,10 @@ Lambda functions are used for several reasons:
 **3. DynamoDB**
 
 DynamoDB is used for real-time hot storage and for storing anomaly cut off values updated by the Sagemaker RCF algorithm
-![Database Model]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/ERD.JPG)
 
 **3NF Database Schema**
+![Database Model]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/ERD.JPG)
+
 
 DynamoDB is used for several reasons:
 
