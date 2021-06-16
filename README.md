@@ -1,6 +1,6 @@
 # End-to-End Serverless Real-Time Anomaly Detection Analytics on AWS
 
-Demonstrates an app tested in a lab environment to facilitate predictive maintenance by detecting and delivering real-time text alerts during anomalous operational conditions.
+Demonstrates an app tested in a lab environment to facilitate predictive maintenance by detecting and delivering real-time text alerts during anomalous operating conditions.
 
 ## Opportunity Statement
 A hypothetical business develops and produces edge devices that measure and control various electrical, thermal and mechanical quantities pertaining to equipment assets. The business has identified a growth opportunity to offer its customers real time analytics to its customers using the operational sensor data. One specific use case the company wants to focus on is real time anomaly detection. The goal is to enable predictive maintenance, to allow customers to preemptively respond to equipment failures, potentially saving hundreds of thousands of dollars of equipment damage. 
