@@ -21,11 +21,11 @@ The following provides an AWS architecture to achieve the business needs.
 
 ### Several design choices are discussed below.
 
-**Serverless Computing on the Cloud**
+**1. Serverless Computing on the Cloud**
 
 While opting for EC2 instances for processing is a possible solution, a serverless approach is opted to make management and provisioning of environment easier, while being more performant. Given the current limitations for edge computing, the data is streamed to the AWS cloud using web APIs.
 
-**Lambda Functions**
+**2. Lambda Functions**
 
 Three Lambda functions are used. 
 1.	[api_ping.py](https://github.com/sahilsaxena21/awsanomalydetection/blob/main/lambda_functions/api_ping.py) To stream real-time data from the web API to DynamoDB. 
@@ -39,7 +39,7 @@ Lambda functions are used for several reasons:
 -	One disadvantage to be noted is that it does not have a built-in retries and failure notifications capabilities (e.g. Data Pipelines). But error handling can be readily customized within the lambda function code. The example code does not include this, but this can be readily coded by invoking AWS X-Ray.
 -	High availability, high scalability and high performance
 
-**DynamoDB**
+**3. DynamoDB**
 
 DynamoDB is used for real-time hot storage and for storing anomaly cut off values updated by the Sagemaker RCF algorithm
 ![Database Model]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/ERD.JPG)
@@ -50,7 +50,7 @@ DynamoDB is used for several reasons:
 -	Filtering using Range Keys: Range/sort key option is used for both stream data and the anomaly cut off table. For the stream data, the option is available to improve the model’s performance by only training models on the most recent sensor data. For the anomaly cut off values, the latest anomaly cut off value is read by the lambda function to decide if a set of observations are anomalous.
 -	Highly available at all times without manual intervention, high level of data durability
 
-**Amazon Random Cut Forests (RCF) for Anomaly Detection**
+**4. Amazon Random Cut Forests (RCF) for Anomaly Detection**
 
 Note: With each data point, RCF associates an anomaly score. Low score values indicate that the data point is considered "normal." High values indicate the presence of an anomaly in the data. The definitions of "low" and "high" depend on the application, but common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous.
 [Detected Anomalous Readings by RCF]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/anomaly_detection.JPG)
