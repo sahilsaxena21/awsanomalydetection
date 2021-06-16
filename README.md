@@ -74,9 +74,8 @@ Note: In this example, an anomalous event was invoked in a test environment at a
 To monitor the performance of the model in real-time, we connect the DynamoDB table to PowerBI using an ODBC connection. Model drift can be readily tracked by monitoring the anomaly cut off scores that is regularly updated by Sagemaker onto DynamoDB. The upper and lower bound limits represents +/- 3 standard deviations from the mean.
 
 ## Next Steps
+                                                     **Lambda Architecture**
 ![Lambda Pattern]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/lambda_pattern.JPG)
-
-**Lambda Architecture**
 
 In the future, the business may want to be able to provide querying functionality. In this case, AWS Redshift can be considered. Moreover, a lambda architecture can be considered for this use-case, since the architecture is designed to answer queries of data that is continuously updated. An example of the architecture is as below.
 
