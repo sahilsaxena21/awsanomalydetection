@@ -1,4 +1,4 @@
-# End-to-End Anomaly Detection Model on AWS
+# End-to-End Anomaly Detection Analytics on AWS
 
 ## Opportunity Statement
 A hypothetical business develops and produces edge devices that measure and control various electrical, thermal and mechanical quantities pertaining to equipment assets. The business has identified a growth opportunity to offer its customers real time analytics to its customers using the operational sensor data. One specific use case the company wants to focus on is real time anomaly detection. The goal is to enable predictive maintenance, to allow customers to preemptively respond to equipment failures, potentially saving hundreds of thousands of dollars of equipment damage. 
