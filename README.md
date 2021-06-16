@@ -43,7 +43,9 @@ Lambda functions are used for several reasons:
 
 DynamoDB is used for real-time hot storage and for storing anomaly cut off values updated by the Sagemaker RCF algorithm
 ![Database Model]( https://github.com/sahilsaxena21/awsanomalydetection/blob/main/images/ERD.JPG)
-DynamoDB is used for several reasons
+
+DynamoDB is used for several reasons:
+
 •	High-performance reads and writes are easy to manage with DynamoDB (OLTP workload)
 •	Allows configuration of a range/sort key, that we’ll use to query the  
 •	Filtering using Range Keys: Range/sort key option is used for both stream data and the anomaly cut off table. For the stream data, the option is available to improve the model’s performance by only training models on the most recent sensor data. For the anomaly cut off values, the latest anomaly cut off value is read by the lambda function to decide if a set of observations are anomalous.
